@@ -1,0 +1,20 @@
+@import '../settings.scss';
+
+.inbox__wrap {
+    background-color: #3a404e;
+    height: 100vh !important;
+    .inbox__content {
+        
+        height: 100%;
+        width: 100%;
+        max-width: 935px;
+        margin: 0 auto;
+        .chat {
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            height: 94vh;
+            background-color: #121212;
+        }
+    }
+}
