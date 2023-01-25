@@ -65,7 +65,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'riodagram.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    '*',
+    'http://localhost:3000',
 ]
 
 TEMPLATES = [

@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aa54d081-b54f-41bc-832c-f73747d8713a" name="Changes" comment="foo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/riodagram/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/riodagram/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front-end/src/Components/Registration/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/Components/Registration/Register.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +37,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Shell Script.Backend">
     <configuration name="Backend" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="py manage.py runserver" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
@@ -87,6 +91,7 @@
       <workItem from="1674628781802" duration="1159000" />
       <workItem from="1674630477145" duration="601000" />
       <workItem from="1674632058105" duration="181000" />
+      <workItem from="1674632419146" duration="2382000" />
     </task>
     <task id="LOCAL-00001" summary="foo">
       <created>1674558340318</created>

@@ -80,7 +80,7 @@ def register(request):
         else:
             return Response('wrong method', status.HTTP_405_METHOD_NOT_ALLOWED)
     except Exception as err:
-        return Response({"error": f'{err}'}, status.HTTP_417_EXPECTATION_FAILED)
+        return Response({"error": f'{err}'}, status.HTTP_204_NO_CONTENT)
 
 
 @api_view(['DELETE'])

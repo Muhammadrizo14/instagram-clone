@@ -13,10 +13,10 @@ function App() {
 
 
     const [usernameValidValue, SetUsernameValidValue] = useState('')
-    const [userSurNameValidValue, SetUserSurNameValidValue] = useState('')
-    const [passwordValidValue, SetPasswordValidValue] = useState('')
     const [nameValidValue, SetNameValidValue] = useState('')
-    const [phoneValidValue, SetPhoneValidValue] = useState('')
+    const [userSurNameValidValue, SetUserSurNameValidValue] = useState('')
+    const [emailValidValue, SetEmailValidValue] = useState('')
+    const [passwordValidValue, SetPasswordValidValue] = useState('')
 
 
     const [formValid, SetFormValid] = useState(false)
@@ -51,25 +51,31 @@ function App() {
         }
     }
 
-    function IsValidPhone(e: React.FormEvent<HTMLInputElement>) {
+    function IsValidEmail(e: React.FormEvent<HTMLInputElement>) {
         if (e.currentTarget.value.length > 1) {
             SetPhoneValid(false)
-            SetPhoneValidValue(e.currentTarget.value)
-
+            SetEmailValidValue(e.currentTarget.value)
         }
     }
 
 
     const RegsiterUser = () => {
-        const postData = {
-            username: usernameValidValue,
-            name: userSurNameValidValue,
-            surname: passwordValidValue,
-            email: nameValidValue,
-            password: phoneValidValue
+        const headers = {
+            "Content-Type": 'multipart/form-data',
         };
 
-        axios.post(`http://127.0.0.1:8000/api/register/`, postData)
+        const postData = {
+            username: usernameValidValue,
+            name: nameValidValue,
+            surname: userSurNameValidValue,
+            email: emailValidValue,
+            password: passwordValidValue
+        };
+
+
+        axios.post(`http://127.0.0.1:8000/api/register/`, postData, {
+            headers: headers
+        })
             .then(res => {
                 console.log(res)
                 SetredirectLogin(true)
@@ -129,7 +135,7 @@ function App() {
                     />
                     <input
                         className="w258"
-                        onChange={(e) => IsValidPhone(e)}
+                        onChange={(e) => IsValidEmail(e)}
                         type="text"
                         placeholder="эл. адрес"
                     />
