@@ -60,24 +60,31 @@ function App() {
 
 
     const RegsiterUser = () => {
-        const headers = {
-            "Content-Type": 'multipart/form-data',
-        };
+        interface iPostData {
+            username: string
+            name: string
+            surname: string
+            email: string
+            password: string
+        }
 
-        const postData = {
+        const postData: iPostData = {
             username: usernameValidValue,
             name: nameValidValue,
             surname: userSurNameValidValue,
             email: emailValidValue,
-            password: passwordValidValue
+            password: passwordValidValue,
         };
 
 
         axios.post(`http://127.0.0.1:8000/api/register/`, postData, {
-            headers: headers
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
         })
             .then(res => {
                 console.log(res)
+                console.log(postData)
                 SetredirectLogin(true)
             })
             .catch(err => {
@@ -137,7 +144,7 @@ function App() {
                         className="w258"
                         onChange={(e) => IsValidEmail(e)}
                         type="text"
-                        placeholder="эл. адрес"
+                        placeholder="Эл. адрес"
                     />
                     <input
                         type="password"

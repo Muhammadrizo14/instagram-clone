@@ -69,7 +69,7 @@ function App() {
                             }
                         }
                         type="text"
-                        placeholder="имя пользователя"
+                        placeholder="Имя пользователя"
                     />
                     <input type="password" onChange={(e) => IsValidPassword(e)} placeholder="Пароль"/>
                     <button style={formValid ? {opacity: "1", cursor: "pointer"} : {opacity: ".7"}}
